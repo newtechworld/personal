@@ -32,3 +32,8 @@ for ioa in $ioas; do
         `iprconfig -c raid-create -r 0 /dev/$disk >/dev/null`
     done
 done
+
+
+# show out the configuration result
+output=`iprconfig -c show-config`
+echo $output
